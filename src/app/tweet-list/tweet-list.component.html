@@ -1,8 +1,10 @@
 <ul>
 	<div class="card" style="width=20rem;" *ngFor="let currentTweet of childTweetList">
 		<div class="card-body">
+			<img src="{{thisUser.displayImg}}" alt="profile pic">
 			<h4 class="card-title">{{currentTweet.author}}:</h4>
 			<h6 class="card-subtitle mb-2 text-muted">{{currentTweet.postTime}}</h6>
+			<br>
 			<p class="card-text">{{currentTweet.description}}</p>
 		</div>
 	</div>

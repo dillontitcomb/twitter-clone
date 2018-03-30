@@ -22,4 +22,6 @@ export class AppComponent {
 		new Tweet("DonTrump", "I really like walls", "", "", this.currentTime, this.dateString),
 		new Tweet("Oprah", "I really like books", "", "", this.currentTime, this.dateString)
 	];
+
+	currentUser: User = new User("Me", "@personUsingTwitter", "https://www.merriam-webster.com/assets/mw/images/article/art-wap-article-main/egg-3442-e1f6463624338504cd021bf23aef8441@1x.jpg");
 }

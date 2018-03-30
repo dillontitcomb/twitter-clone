@@ -9,4 +9,5 @@ import { Tweet } from '../models/tweet.model';
 })
 export class TweetListComponent {
 	@Input() childTweetList: Tweet[];
+	@Input() thisUser: User;
 }
