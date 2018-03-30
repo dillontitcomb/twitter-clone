@@ -15,8 +15,8 @@ Project progression: start with content page, create sign up and log in flows la
 
 Models:
 	User:
+	- handle: string
 	- displayName: string
-	- atHandle: string
 	- displayImg: string(url)
 	- Followers [User]
 	- Following [User]
