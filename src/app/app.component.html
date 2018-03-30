@@ -15,7 +15,8 @@
 			<hr>
 		</div>
 		<div class="col-sm-8">
-			<h1>What's happening form</h1>
+			<app-add-tweet [thisUser]="currentUser" (sendTweet)="addTweet($event)"></app-add-tweet>
+			<br>
 			<app-tweet-list [childTweetList]="masterTweetList" [thisUser]="currentUser"></app-tweet-list>
 		</div>
 	</div>

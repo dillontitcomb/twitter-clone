@@ -1,5 +1,20 @@
 img {
 	float: left;
 	width: 75px;
+	height: 75px;
 	margin-right: 10px;
+}
+
+.interaction {
+	padding-left: 20px;
+	padding-bottom: 10px;
+}
+
+#handle {
+	color: gray;
+	font-size: 20px;
+}
+
+.card-text {
+	padding-top: 10px;
 }
