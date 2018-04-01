@@ -5,13 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { TweetListComponent } from './tweet-list/tweet-list.component';
 import { AddTweetComponent } from './add-tweet/add-tweet.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ProfileInfoComponent } from './profile-info/profile-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TweetListComponent,
     AddTweetComponent,
-    NavbarComponent
+    NavbarComponent,
+    ProfileInfoComponent
   ],
   imports: [
     BrowserModule,
