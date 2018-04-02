@@ -1,14 +1,12 @@
-<app-navbar></app-navbar>
+<div id="contentStart">
+	<app-navbar></app-navbar>
 <div class="container">
-	<div id="contentStart" class="row">
+	<div  class="row">
 		<div class="col-sm-4">
 			<app-profile-info [thisUser]="currentUser"></app-profile-info>
-			<h1>Who to Follow</h1>
-			<hr>
-			<h1>Trends for you</h1>
-			<hr>
-			<h1>Info Block</h1>
-			<hr>
+			<app-who-to-follow [thisUser]="currentUser" [childUserList]="masterUserList"></app-who-to-follow>
+			<app-trends [thisUser]="currentUser"></app-trends>
+			<app-info-block [thisUser]="currentUser"></app-info-block>
 		</div>
 		<div class="col-sm-8">
 			<app-add-tweet [thisUser]="currentUser" (sendTweet)="addTweet($event)"></app-add-tweet>
@@ -16,4 +14,5 @@
 			<app-tweet-list [childTweetList]="masterTweetList" [thisUser]="currentUser"></app-tweet-list>
 		</div>
 	</div>
+</div>
 </div>

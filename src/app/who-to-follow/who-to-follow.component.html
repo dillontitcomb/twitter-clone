@@ -1,0 +1,10 @@
+
+<div id="follow-card" class="card" style="width=20rem;" >
+	<h6 id="follow-header">Who to follow:</h6>
+	<div class="card-body" *ngFor="let currentUser of childUserList">
+		<img id="follow-img" src="{{currentUser.displayImg}}" alt="profile pic">
+		<p class="card-title"><span id="name">{{currentUser.displayName}}</span><br><span id="handle">{{currentUser.handle}}</span></p>
+		<hr>
+	</div>
+	<p id="find-people"><a href="#">Find people you know</a></p>
+</div>

@@ -1,5 +1,5 @@
 <div class="container">
-	<div class="card" style="width=20rem;" *ngFor="let currentTweet of childTweetList">
+	<div id="tweet-card" class="card" style="width=20rem;" *ngFor="let currentTweet of childTweetList">
 		<div class="card-body">
 			<img id="tweetImage" src="{{currentTweet.author.displayImg}}" alt="profile pic">
 			<h4 class="card-title">{{currentTweet.author.displayName}}  <span id="handle">{{currentTweet.author.handle}}</span></h4>
