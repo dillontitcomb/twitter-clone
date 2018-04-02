@@ -1,4 +1,9 @@
 .container {
 	background-color: #e6ecf0;
 	padding-top: 10px;
+	padding-bottom: 300px;
+}
+
+#contentStart {
+	background-color: #e6ecf0;
 }
