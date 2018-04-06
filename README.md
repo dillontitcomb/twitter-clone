@@ -1,6 +1,6 @@
 # _Dillon's Twitter Clone_
 
-#### Typescript & Angular 5 Exercise for Epicodus, 3.30.2018
+#### Typescript & Angular 5 Exercise for Epicodus (continued), 4.6.2018
 _This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5._
 
 #### By _**Dillon Titcomb**_
@@ -11,7 +11,12 @@ _This webpage aims to resemble the layout and feature set of the popular twitter
 
 ## Specifications / Planning
 
-Project progression: start with content page, create sign up and log in flows later (once we've learned routing). Also create individual profile pages later.
+To do:
+	- Get routing working for all pages
+	- Connect Firebase
+	- Create sign up flow
+	- Use services to provide tweet and user data
+	- Use pipes to filter tweets
 
 Models:
 	User:
@@ -33,6 +38,10 @@ Tweet:
 	- isLiked: boolean
 
 Components:
+ 	- Welcome splash page
+	-	Create profile page
+	-	Log in page
+	- Browse page
 	- App component
 	- Nav Bar
 	- User Info
