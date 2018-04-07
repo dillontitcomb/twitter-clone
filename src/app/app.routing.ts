@@ -8,12 +8,16 @@ import { WhoToFollowComponent } from './who-to-follow/who-to-follow.component';
 import { TrendsComponent } from './trends/trends.component';
 import { InfoBlockComponent } from './info-block/info-block.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-
+import { BrowseComponent } from './browse/browse.component';
 
 const appRoutes: Routes = [
 	{
 		path: '',
 		component: WelcomeComponent
+	},
+	{
+		path: 'browse',
+		component: BrowseComponent
 	}
  ];
 
