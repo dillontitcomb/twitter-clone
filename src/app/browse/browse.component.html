@@ -1,4 +1,7 @@
 <div class="container">
+	<div *ngFor="let tweet of tweets | async">
+		<h3>{{tweet.author.displayName}}, {{tweet.description}}</h3>
+	</div>
 	<div class="row">
 		<div class="col-sm-4">
 			<app-profile-info [thisUser]="currentUser"></app-profile-info>
