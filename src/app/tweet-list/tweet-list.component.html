@@ -3,7 +3,7 @@
 		<div class="card-body">
 			<img id="tweetImage" src="{{tweet.author.displayImg}}" alt="profile pic">
 			<h4 class="card-title">{{tweet.author.displayName}}  <span id="handle">{{tweet.author.handle}}</span></h4>
-			<h6 class="card-subtitle mb-2 text-muted">{{tweet.postTime}}</h6>
+			<p id="dates" class="card-subtitle mb-2 text-muted">{{tweet.postTime}}<br>{{tweet.postDate}}</p>
 			<p class="card-text">{{tweet.description}}</p>
 		</div>
 		<div class="interaction">

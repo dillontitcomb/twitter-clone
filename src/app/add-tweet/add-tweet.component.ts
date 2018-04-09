@@ -1,15 +1,17 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { TweetService } from '../tweet.service';
 import { User } from '../models/user.model';
 import { Tweet } from '../models/tweet.model';
 
 @Component({
   selector: 'app-add-tweet',
   templateUrl: './add-tweet.component.html',
-  styleUrls: ['./add-tweet.component.css']
+  styleUrls: ['./add-tweet.component.css'],
+	providers: [TweetService]
 })
 export class AddTweetComponent {
+	constructor(private tweetService: TweetService) {}
 	@Input() thisUser: User;
-	@Output() sendTweet = new EventEmitter();
 
 	currentTime = new Date();
 	month: number = this.currentTime.getMonth() + 1;
@@ -18,7 +20,7 @@ export class AddTweetComponent {
 	dateString: string = this.month + "/" + this.day + "/" + this.year;
 
 	submitForm(description: string, image: string, link: string) {
-		let newTweet = new Tweet(this.thisUser, description, image, link, this.currentTime, this.dateString);
-		this.sendTweet.emit(newTweet);
+		let newTweet = new Tweet(this.thisUser, description, image, link, this.currentTime.toTimeString(), this.dateString);
+		this.tweetService.addTweet(newTweet);
 	}
 }

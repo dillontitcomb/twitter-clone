@@ -27,3 +27,7 @@ img#tweetImage {
 .card-text {
 	padding-top: 10px;
 }
+
+#dates {
+	font-size: 12px;
+}
