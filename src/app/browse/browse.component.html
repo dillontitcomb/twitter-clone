@@ -12,7 +12,7 @@
 		<div class="col-sm-8">
 			<app-add-tweet [thisUser]="currentUser" (sendTweet)="addTweet($event)"></app-add-tweet>
 			<br>
-			<app-tweet-list [childTweetList]="masterTweetList" [thisUser]="currentUser"></app-tweet-list>
+			<app-tweet-list [thisUser]="currentUser"></app-tweet-list>
 		</div>
 	</div>
 </div>

@@ -1,10 +1,10 @@
 <div class="container">
-	<div id="tweet-card" class="card" style="width=20rem;" *ngFor="let currentTweet of childTweetList">
+	<div id="tweet-card" class="card" style="width=20rem;" *ngFor="let tweet of tweets | async">
 		<div class="card-body">
-			<img id="tweetImage" src="{{currentTweet.author.displayImg}}" alt="profile pic">
-			<h4 class="card-title">{{currentTweet.author.displayName}}  <span id="handle">{{currentTweet.author.handle}}</span></h4>
-			<h6 class="card-subtitle mb-2 text-muted">{{currentTweet.postTime}}</h6>
-			<p class="card-text">{{currentTweet.description}}</p>
+			<img id="tweetImage" src="{{tweet.author.displayImg}}" alt="profile pic">
+			<h4 class="card-title">{{tweet.author.displayName}}  <span id="handle">{{tweet.author.handle}}</span></h4>
+			<h6 class="card-subtitle mb-2 text-muted">{{tweet.postTime}}</h6>
+			<p class="card-text">{{tweet.description}}</p>
 		</div>
 		<div class="interaction">
 			<h6><a href="#">Reply</a> | <a href="#">Retweet</a> | <a href="#">Like</a> | <a href="#">DM</a></h6>
