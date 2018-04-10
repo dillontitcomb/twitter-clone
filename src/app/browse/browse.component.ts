@@ -31,5 +31,4 @@ export class BrowseComponent implements OnInit  {
 	dateString: string = this.month + "/" + this.day + "/" + this.year;
 
 	currentUser: User = new User("Me", "@personUsingTwitter", "https://www.merriam-webster.com/assets/mw/images/article/art-wap-article-main/egg-3442-e1f6463624338504cd021bf23aef8441@1x.jpg");
-
 }
