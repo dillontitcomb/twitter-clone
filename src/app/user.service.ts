@@ -5,7 +5,17 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 
 @Injectable()
 export class UserService {
+ 	users: FirebaseListObservable<any[]>;
 
-  constructor() { }
+  constructor(private database: AngularFireDatabase) {
+		this.users = database.list('users');
+	}
 
+	getUsers() {
+		return this.users;
+	}
+
+	addUser(newUser: User) {
+    this.users.push(newUser);
+  }
 }
