@@ -16,8 +16,6 @@ export class TweetService {
 	}
 
 	addTweet(newTweet: Tweet) {
-		console.log(newTweet);
     this.tweets.push(newTweet);
   }
-
 }
