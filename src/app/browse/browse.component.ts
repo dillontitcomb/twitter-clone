@@ -4,17 +4,20 @@ import { Tweet } from '../models/tweet.model';
 import { Router } from '@angular/router';
 import { AppComponent } from '../app.component';
 import { TweetService } from '../tweet.service';
+import { CurrentUserService } from '../current-user.service';
 import { FirebaseListObservable } from 'angularfire2/database';
+import { FirebaseObjectObservable } from 'angularfire2/database';
+
 
 @Component({
   selector: 'app-browse',
   templateUrl: './browse.component.html',
   styleUrls: ['./browse.component.css'],
-	providers: [TweetService]
+	providers: [TweetService, CurrentUserService]
 })
 export class BrowseComponent implements OnInit  {
 	tweets: FirebaseListObservable<any[]>;
-	constructor(private router: Router, private tweetService: TweetService){}
+	constructor(private router: Router, private tweetService: TweetService, private currentUserService: CurrentUserService){}
 
 	ngOnInit(){
 	    this.tweets = this.tweetService.getTweets();
