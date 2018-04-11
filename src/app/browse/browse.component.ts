@@ -22,7 +22,7 @@ export class BrowseComponent implements OnInit  {
 
 	@Input() childTweetList: Tweet[];
 	@Input() thisUser: User;
-	@Input() childUserList: User[];
+
 
 	currentTime = new Date();
 	month: number = this.currentTime.getMonth() + 1;
@@ -30,5 +30,5 @@ export class BrowseComponent implements OnInit  {
 	year: number = this.currentTime.getFullYear();
 	dateString: string = this.month + "/" + this.day + "/" + this.year;
 
-	currentUser: User = new User("Me", "@personUsingTwitter", "https://www.merriam-webster.com/assets/mw/images/article/art-wap-article-main/egg-3442-e1f6463624338504cd021bf23aef8441@1x.jpg");
+	currentUser: User = new User("me@gmail.com", "password", "Me the person", "@meThePerson");
 }
