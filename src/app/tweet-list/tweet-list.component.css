@@ -31,3 +31,8 @@ img#tweetImage {
 #dates {
 	font-size: 12px;
 }
+
+#tweetContentImage {
+	width: 100px;
+	height: 100px;
+}
