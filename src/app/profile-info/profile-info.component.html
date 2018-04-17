@@ -1,11 +1,12 @@
 
 <div class="card" style="width=20rem;">
 		<div id="prof-card" class="card-body">
-			<img id="prof-pic" src="{{thisUser.displayImg}}" alt="profile pic">
-			<h6 class="card-title">{{thisUser.displayName}}<br><span id="handle">{{thisUser.handle}}</span></h6>
+			<img id="prof-pic" src="{{currentUser.displayImg}}" alt="profile pic">
+			<h6 class="card-title">{{currentUser.displayName}}<br><span id="handle">{{currentUser.handle}}</span></h6>
 		<div>
 			<hr>
 			<p id="prof-stats">Tweets | Following | Followers</p>
+			<h4>{{currentUser.displayName}}</h4>
 		</div>
 	</div>
 </div>
