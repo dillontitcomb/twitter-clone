@@ -8,6 +8,7 @@
       <a class="nav-item nav-link" routerLink="browse">Moments</a>
       <a class="nav-item nav-link" routerLink="browse">Notifications</a>
       <a class="nav-item nav-link" routerLink="browse">Messages</a>
+      <a *ngIf="currentUser.userName !== ''" class="nav-item nav-link" routerLink="" (click)="logoutClick()">Logout</a>
     </div>
   </div>
 </nav>

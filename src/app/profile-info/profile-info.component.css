@@ -24,3 +24,7 @@
 	color: blue;
 	cursor: pointer;
 }
+
+.prof-value {
+	font-weight: normal;
+}
