@@ -2,6 +2,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { TweetService } from '../tweet.service';
 import { User } from '../models/user.model';
 import { Tweet } from '../models/tweet.model';
+import { currentUser } from '../currentUser';
 
 @Component({
   selector: 'app-add-tweet',
@@ -11,7 +12,7 @@ import { Tweet } from '../models/tweet.model';
 })
 export class AddTweetComponent {
 	constructor(private tweetService: TweetService) {}
-	@Input() thisUser: User;
+	currentUser = currentUser;
 
 	currentTime = new Date();
 	month: number = this.currentTime.getMonth() + 1;
@@ -20,7 +21,7 @@ export class AddTweetComponent {
 	dateString: string = this.month + "/" + this.day + "/" + this.year;
 
 	submitForm(description: string, image: string, link: string) {
-		let newTweet = new Tweet(this.thisUser, description, image, link, this.currentTime.toTimeString(), this.dateString);
+		let newTweet = new Tweet(this.currentUser, description, image, link, this.currentTime.toTimeString(), this.dateString);
 		this.tweetService.addTweet(newTweet);
 	}
 }

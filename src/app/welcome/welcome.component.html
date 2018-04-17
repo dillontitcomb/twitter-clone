@@ -16,7 +16,7 @@
 				<br>
 				<input class="form-control form-control-sm links" #displayName placeholder="Display Name">
 				<input class="form-control form-control-sm links" #handle placeholder="Twitter @handle">
-				<p><button class="btn btn-primary" (click)="submitForm(email.value, password.value, displayName.value, handle.value); email.value=''; password.value=''; displayName.value=''; handle.value='';">Get Started</button> Have an account? <a routerLink="login">Log in</a></p>
+				<p><button routerLink='browse' class="btn btn-primary" (click)="submitForm(email.value, password.value, displayName.value, handle.value); email.value=''; password.value=''; displayName.value=''; handle.value='';">Get Started</button> Have an account? <a routerLink="">Log in</a></p>
 			</div>
 		</div>
 	</div>

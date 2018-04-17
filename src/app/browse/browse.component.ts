@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { AppComponent } from '../app.component';
 import { TweetService } from '../tweet.service';
 import { FirebaseListObservable } from 'angularfire2/database';
+import { currentUser } from '../currentUser';
 
 @Component({
   selector: 'app-browse',
@@ -15,13 +16,13 @@ import { FirebaseListObservable } from 'angularfire2/database';
 export class BrowseComponent implements OnInit  {
 	tweets: FirebaseListObservable<any[]>;
 	constructor(private router: Router, private tweetService: TweetService){}
+  currentUser = currentUser;
 
 	ngOnInit(){
 	    this.tweets = this.tweetService.getTweets();
 	  }
 
 	@Input() childTweetList: Tweet[];
-	@Input() thisUser: User;
 	@Input() childUserList: User[];
 
 	currentTime = new Date();
@@ -29,6 +30,4 @@ export class BrowseComponent implements OnInit  {
 	day: number = this.currentTime.getDate();
 	year: number = this.currentTime.getFullYear();
 	dateString: string = this.month + "/" + this.day + "/" + this.year;
-
-	currentUser: User = new User("username", "password", "Me", "@personUsingTwitter");
 }

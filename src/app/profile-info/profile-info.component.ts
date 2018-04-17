@@ -9,10 +9,18 @@ import { currentUser } from '../currentUser';
   styleUrls: ['./profile-info.component.css']
 })
 export class ProfileInfoComponent implements OnInit {
-	@Input() thisUser: User;
   currentUser = currentUser;
+  signedUp: boolean;
+
+  getSignupStatus() {
+    if (currentUser.displayName === "") {
+      this.signedUp = false;
+    } else {
+      this.signedUp = true;
+    }
+  }
 
   ngOnInit(){
-    // console.log("This is the display name of the current user: " + currentUser.displayName);
+    this.getSignupStatus();
   }
 }

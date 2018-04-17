@@ -3,6 +3,7 @@ import { User } from '../models/user.model';
 import { Tweet } from '../models/tweet.model';
 import { UserService } from '../user.service';
 import { FirebaseListObservable } from 'angularfire2/database';
+import { currentUser } from '../currentUser';
 
 @Component({
   selector: 'app-who-to-follow',
@@ -13,10 +14,9 @@ import { FirebaseListObservable } from 'angularfire2/database';
 export class WhoToFollowComponent implements OnInit {
 	users: FirebaseListObservable<any[]>;
 	constructor (private userService: UserService) {}
-	@Input() thisUser: User;
+  currentUser = currentUser;
 
 	ngOnInit(){
 		this.users = this.userService.getUsers();
-		console.log(this.users);
 	}
 }
