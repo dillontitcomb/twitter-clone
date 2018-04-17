@@ -1,59 +1,25 @@
 # _Dillon's Twitter Clone_
 
-#### Typescript & Angular 5 Exercise for Epicodus (continued), 4.6.2018
+#### Typescript & Angular 5 Exercise for Epicodus (continued), 4.17.2018
 _This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5._
 
 #### By _**Dillon Titcomb**_
 
 ## Description
 
-_This webpage aims to resemble the layout and feature set of the popular twitter.com. Users can sign up for new accounts or sign in to access their personalized twitter feed. Users can create, view, and delete their tweets and search for those of others._
+_This webpage aims to resemble the layout and feature set of the popular twitter.com. Users can sign up for new accounts or sign in to access their personalized twitter feed. Users can create, view, and delete their tweets and search for those of others. Much the above functionality is still in the works, but presently users can create accounts, view other users' tweets, create tweets, and sign out._
 
 ## Specifications / Planning
 
-To do:
-	- Get routing working for all pages
-	- Connect Firebase
-	- Create sign up flow
-	- Use services to provide tweet and user data
-	- Use pipes to filter tweets
-
-Models:
-	User:
-	- handle: string
-	- displayName: string
-	- displayImg: string(url)
-	- Followers [User]
-	- Following [User]
-
-Tweet:
-	- author: object: User
-	- description: string
-	- image: string (url)
-	- imgLink: string
-	- likes: number
-	- retweets: number
-	- postTime: number
-	- postDate: date
-	- isLiked: boolean
-
-Components:
- 	- Welcome splash page
-	-	Create profile page
-	-	Log in page
-	- Browse page
-	- App component
-	- Nav Bar
-	- User Info
-	- Create Tweet
-	- Tweet List
-	- Who to follow
-	- Trends to follow
-	- Footer Box
+* _To do:_
+	* _Use pipes to filter tweets_
+  * _Create user authentication_
+  * _Add route guards_
+  * _Add hashtag, like, and comment functionality._
 
 ## Setup/Installation Requirements
 
-* _Navigate to to https://twitter-clone-95136.firebaseapp.com/_
+* _Navigate to https://twitter-clone-95136.firebaseapp.com/_
 
 * _OR_
 
@@ -66,7 +32,7 @@ Components:
 
 ## Known Bugs
 
-_No known bugs._
+_Many links are placeholders. Users cannot log back in once signed out._
 
 ## Support and contact details
 
