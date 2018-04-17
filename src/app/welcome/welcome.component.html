@@ -13,7 +13,10 @@
 				<h6>Join Twitter today.</h6>
 				<input class="form-control form-control-sm links" #email placeholder="Phone or email">
 				<input class="form-control form-control-sm links" #password placeholder="Password">
-				<p><button class="btn btn-primary" (click)="submitForm(email.value, password.value); email.value=''; password.value='';">Get Started</button> Have an account?<a routerLink="login">Log in</a></p>
+				<br>
+				<input class="form-control form-control-sm links" #displayName placeholder="Display Name">
+				<input class="form-control form-control-sm links" #handle placeholder="Twitter @handle">
+				<p><button class="btn btn-primary" (click)="submitForm(email.value, password.value, displayName.value, handle.value); email.value=''; password.value=''; displayName.value=''; handle.value='';">Get Started</button> Have an account? <a routerLink="login">Log in</a></p>
 			</div>
 		</div>
 	</div>
