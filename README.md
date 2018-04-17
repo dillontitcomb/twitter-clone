@@ -53,6 +53,10 @@ Components:
 
 ## Setup/Installation Requirements
 
+* _Navigate to to https://twitter-clone-95136.firebaseapp.com/_
+
+* _OR_
+
 * _Clone this repository_
 * _Issue the following commands in terminal:_
 * _npm install_
